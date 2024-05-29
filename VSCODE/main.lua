@@ -1,34 +1,30 @@
---[[
-+ - * / % ^
-]] 
 
-num1=10
-num2=5
--- soma=num1+num2^2
---print(20%3)
+-- AULA IF
+print("digite um valor")
+n1=io.read()
+print("digite outro valor")
+n2=io.read()
+print("Digite a operação")
+op=io.read()
 
---[[
-Relacionais > >= < <= ~= ==
-]]
+if op=="+" then
+    res=n1+n2
 
-a=20~=20
---print(a)
+    print("Soma"..res)
 
---[[
-Lógicos    or and not nil
-and = retorna primeiro se for falso, se não for retornar o segundo.
-or = retorna o primeiro se ele não for falso
-not = inverte.
-]]
+elseif op=="-" then
+    res=n1-n2
 
---print(10 and 2) --2
+    print("Subtração"..res)
+elseif op=="*" then
+    res=n1*n2
+    
+    print("Multiplicação"..res)
+elseif op=="/" then 
+    res=n1/n2
+    print("Divisão"..res)   
+else 
+    print("Operacao invalida")    
 
-
-name,surname=nil,nil
---print(name, surname)
-
-nota1,nota2=50,30
-local soma=nota1+nota2
-do
-    print(soma)
 end
+
