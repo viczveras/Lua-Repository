@@ -1,30 +1,34 @@
+--while enquanto for verdadeiro, realizará o processo, caso não, caira no end.
 
--- AULA IF
-print("digite um valor")
-n1=io.read()
-print("digite outro valor")
-n2=io.read()
-print("Digite a operação")
-op=io.read()
-
-if op=="+" then
-    res=n1+n2
-
-    print("Soma"..res)
-
-elseif op=="-" then
-    res=n1-n2
-
-    print("Subtração"..res)
-elseif op=="*" then
-    res=n1*n2
-    
-    print("Multiplicação"..res)
-elseif op=="/" then 
-    res=n1/n2
-    print("Divisão"..res)   
-else 
-    print("Operacao invalida")    
-
+num=0
+while num<10 do
+    print(num)
+    num=num+1
 end
 
+print("\n")
+
+--repeat : até que seja verdadedeiro.
+num=0
+repeat 
+    print(num)
+    num=num+1
+until num>10
+
+--for numérico
+dias={"Domingo","Segunda","Terca","Quarta","Quinta","Sexta","Sabado"}
+--for i = 1,7 do
+--    print(dias[i])
+--   
+-- end
+
+for k,v in pairs(dias) do
+    print(k.." - "..v)
+    
+end
+--for tradicional
+nome="Victor"
+for v in string.gmatch(nome,".") do
+    print(v)
+    
+end
