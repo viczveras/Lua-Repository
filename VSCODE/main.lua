@@ -34,7 +34,7 @@ for v in string.gmatch(nome,".") do
 end
 
 i=0
-
+-- o return também poderia ser usado no local mas acabaria com o programa.
 while i<100 do
     print(i)
     if i > 10 then 
@@ -43,3 +43,95 @@ while i<100 do
     i=i+1
 end
 print("Fim da execucao")
+
+
+-- go to
+
+::ini::
+print("Digite um numero: ")
+numero=io.read()
+print("Numero digitado: "..numero)
+print("\nDigitar outro numero? ")
+resp=io.read()
+
+if resp=="s" then
+    goto ini
+    
+end
+
+
+-------
+
+
+::sala1:: do
+ print("\n\nVoce esta na sala 1")
+ print("Deseja ir para qual sala? [1,2,3,4,]")
+ local sala=io.read()
+ if     sala=="1" then
+    goto sala1
+ elseif sala=="2" then
+    goto sala2
+elseif  sala=="3" then
+    goto sala3
+elseif sala=="4" then 
+    goto sala4   
+else 
+    print("Sala invalida")
+ end
+
+end
+
+::sala2:: do
+    print("\n\nVoce esta na sala 2")
+    print("Deseja ir para qual sala? [1,2,3,4,]")
+    local sala=io.read()
+    if     sala=="1" then
+       goto sala1
+    elseif sala=="2" then
+       goto sala2
+   elseif  sala=="3" then
+       goto sala3
+   elseif sala=="4" then 
+       goto sala4   
+   else 
+       print("Sala invalida")
+    end
+   
+   end
+   
+   ::sala3:: do
+    print("\n\nVoce esta na sala 3")
+    print("Deseja ir para qual sala? [1,2,3,4,]")
+    local sala=io.read()
+    if     sala=="1" then
+       goto sala1
+    elseif sala=="2" then
+       goto sala2
+   elseif  sala=="3" then
+       goto sala3
+   elseif sala=="4" then 
+       goto sala4   
+   else 
+       print("Sala invalida")
+    end
+   
+   end
+   
+   ::sala4:: do
+    print("\n\nVoce esta na sala 4, e descobriu a saida! Parabens")
+    print("Fim de jogo")
+    local sala=io.read()
+    if     sala=="1" then
+       goto sala1
+    elseif sala=="2" then
+       goto sala2
+   elseif  sala=="3" then
+       goto sala3
+   elseif sala=="4" then 
+       goto sala4   
+   else 
+       print("Sala invalida")
+    end
+   
+   end
+   
