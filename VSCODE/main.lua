@@ -32,3 +32,14 @@ for v in string.gmatch(nome,".") do
     print(v)
     
 end
+
+i=0
+
+while i<100 do
+    print(i)
+    if i > 10 then 
+        break
+    end
+    i=i+1
+end
+print("Fim da execucao")
