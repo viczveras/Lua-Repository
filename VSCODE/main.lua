@@ -1,4 +1,4 @@
---while enquanto for verdadeiro, realizará o processo, caso não, caira no end.
+--[[while enquanto for verdadeiro, realizará o processo, caso não, caira no end.
 
 num=0
 while num<10 do
@@ -62,7 +62,7 @@ end
 
 -------
 
-
+--[[
 ::sala1:: do
  print("\n\nVoce esta na sala 1")
  print("Deseja ir para qual sala? [1,2,3,4,]")
@@ -116,8 +116,8 @@ end
     end
    
    end
-   
-   ::sala4:: do
+ --]]  
+  --[[ ::sala4:: do
     print("\n\nVoce esta na sala 4, e descobriu a saida! Parabens")
     print("Fim de jogo")
     local sala=io.read()
@@ -135,3 +135,21 @@ end
    
    end
    
+ --]]
+
+   -- listas 
+
+   num={10,5,8,2,3,4,5,7,5,2,9}
+   --for i = 1,10 do
+   -- print(num[i])
+   --end
+
+   for i=1, #num do
+    print(num[i])
+   end
+print("---------------")
+soma=0
+for i=1, #num do
+    soma=soma+num[i]
+end
+print("Soma "..soma)
