@@ -144,7 +144,7 @@ end
    -- print(num[i])
    --end
 
-   for i=1, #num do
+--[[for i=1, #num do
     print(num[i])
    end
 print("---------------")
@@ -153,3 +153,40 @@ for i=1, #num do
     soma=soma+num[i]
 end
 print("Soma "..soma)
+--]]
+
+--functions
+
+--[[function ola()
+print("Seja bem vindo")
+print("Continuação Lua")
+print("----------------")
+end    
+
+ola()
+--]]
+print("Digite o primeiro valor: ")
+num1=io.read()
+print("Digite o segundo valor: ")
+num2=io.read()
+
+--[[function soma(n1,n2)
+    res=n1+n2
+    print("A soma de "..n1.." e "..n2.." da "..res)
+    print("-------------------------------")
+end   
+--]]
+-- tá funcional, mas não sei pq o debugger não roda esse código
+function calc(n1,n2)
+    soma=n1+n2
+    mult=n1*n2
+    subt=n1-n2
+    divz=n2/n2
+
+    return soma,mult,subt,divz
+end
+rsoma,rmult,rsubt,rdivz=calc(num1,num2)
+
+
+print(rsoma,rmult,rsubt,rdivz)
+print("-------------------------------")
