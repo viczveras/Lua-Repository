@@ -177,7 +177,7 @@ num2=io.read()
 end   
 --]]
 -- tá funcional, mas não sei pq o debugger não roda esse código
-function calc(n1,n2)
+--[[function calc(n1,n2)
     soma=n1+n2
     mult=n1*n2
     subt=n1-n2
@@ -190,3 +190,14 @@ rsoma,rmult,rsubt,rdivz=calc(num1,num2)
 
 print(rsoma,rmult,rsubt,rdivz)
 print("-------------------------------")
+--]]
+
+--funcão variadica
+function soma(...)
+    local s=0
+    for i,v in pairs{...} do
+        s=s+v
+    end
+ return s
+end
+ print("Soma: "..soma(1,2,3,))
