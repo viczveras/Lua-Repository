@@ -20,6 +20,7 @@ end
 
 function User_answer()
     while true do 
+            print("\nDigite seu palpite: ")
         answer = io.read()
         if type(tonumber(answer)) == "number" then --se a resposta for do tipo número faça
         answer = tonumber(answer)
@@ -31,11 +32,28 @@ function User_answer()
     else
         print("Voce deve digitar apenas numeros")
         end
+    end
 end
+-- compara o número do jogador com o do computador.
+function compara_answer(num_do_computador, answer)
+if num_do_computador == answer then return true else return false end
+end
+
+function imprime_interacao(numero, resultado_tentativa)
+    if resultado_tentativa then
+        print("Boa, voce adivinhou o numero: "..numero)
+    else
+        print("Poxa, nao foi dessa vez que voce conseguiu, mas nao desista!")
+        print("Tente novamente")
+    end
+    return not resultado_tentativa    
 end
 
 
-print("Hello world")
 
-
-
+Open_game()
+Manual_game()
+secret_number = Random_number()
+answer = User_answer()
+imprime_interacao(secret_number,compara_answer(secret_number,answer))
+answer = User_answer()
