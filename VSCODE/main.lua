@@ -15,9 +15,11 @@ function Manual_game()
     end
 
 function Random_number()
-    return 50
-    
+  seed = os.time()
+  math.randomseed(seed)
+  return math.random(1,100)
 end
+
 
 function User_answer()
     while true do 
@@ -55,13 +57,30 @@ function partida(secret_number)
       return imprime_interacao(secret_number,compara_answer(secret_number,answer))
 end
 
-
-Open_game()
-Manual_game()
+function loop_principal()
 secret_number = Random_number()
+-- print(secret_number) caso queira testar o jogo habilite.
 continuar_jogando = true
 while continuar_jogando do 
  continuar_jogando = partida(secret_number)
+    end
 end
+
+function jogo()
+      repete_jogo = true
+        repeat
+        loop_principal()
+        print("Deseja testar a sorte novamente? (S, ou N)")
+        resposta = io.read()
+        if resposta =="N" then
+           repete_jogo = false
+           end
+        until not repete_jogo 
+        
+        
+end
+Open_game()
+Manual_game()
+jogo()
 
 
