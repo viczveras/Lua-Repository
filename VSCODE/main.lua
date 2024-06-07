@@ -1,3 +1,4 @@
+
 function Open_game()
     print("Bem vindo ao jogo")
     print("Desenvolvido por Victor Veras")
@@ -49,11 +50,18 @@ function imprime_interacao(numero, resultado_tentativa)
     return not resultado_tentativa    
 end
 
+function partida(secret_number)
+      answer = User_answer()
+      return imprime_interacao(secret_number,compara_answer(secret_number,answer))
+end
 
 
 Open_game()
 Manual_game()
 secret_number = Random_number()
-answer = User_answer()
-imprime_interacao(secret_number,compara_answer(secret_number,answer))
-answer = User_answer()
+continuar_jogando = true
+while continuar_jogando do 
+ continuar_jogando = partida(secret_number)
+end
+
+
