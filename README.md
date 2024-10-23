@@ -1,2 +1,2 @@
 # Lua Repository
- lua repository
+ Contains a little game that i developed while i studied the lua language.
